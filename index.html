@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock Timer</title>
+  <meta name="description" content="Web-based timer with analog and digital clocks"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+  <header class="bg-white shadow-sm">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-800">Clock Timer</h1>
+      <div class="flex space-x-4">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Timer</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-blue-600 transition">Stopwatch</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-blue-600 transition">Alarm</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Analog Clock Section -->
+    <section class="clock-section">
+      <div class="clock-face mb-8">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-dot"></div>
+
+        <div class="number">
+          <span style="transform: rotate(30deg) translate(0, -170px) rotate(-30deg)">1</span>
+          <span style="transform: rotate(60deg) translate(0, -170px) rotate(-60deg)">2</span>
+          <span style="transform: rotate(90deg) translate(0, -170px) rotate(-90deg)">3</span>
+          <span style="transform: rotate(120deg) translate(0, -170px) rotate(-120deg)">4</span>
+          <span style="transform: rotate(150deg) translate(0, -170px) rotate(-150deg)">5</span>
+          <span style="transform: rotate(180deg) translate(0, -170px) rotate(-180deg)">6</span>
+          <span style="transform: rotate(210deg) translate(0, -170px) rotate(-210deg)">7</span>
+          <span style="transform: rotate(240deg) translate(0, -170px) rotate(-240deg)">8</span>
+          <span style="transform: rotate(270deg) translate(0, -170px) rotate(-270deg)">9</span>
+          <span style="transform: rotate(300deg) translate(0, -170px) rotate(-300deg)">10</span>
+          <span style="transform: rotate(330deg) translate(0, -170px) rotate(-330deg)">11</span>
+          <span style="transform: rotate(0deg) translate(0, -170px) rotate(0deg)">12</span>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Analog Clock</h2>
+        <p class="text-gray-600 mb-6">Scroll down to see the digital version</p>
+        <i class="fas fa-chevron-down text-3xl text-blue-600 animate-bounce"></i>
+      </div>
+    </section>
+
+    <!-- Digital Clock Section -->
+    <section id="digital-section" class="clock-section">
+      <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Digital Clock</h2>
+        <div class="text-center">
+          <div class="text-6xl font-mono font-bold text-blue-800 mb-8" id="digital-clock">00:00:00</div>
+          <div class="flex justify-center space-x-4">
+            <button class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Start</button>
+            <button class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Clock Timer App. All rights reserved. this is just a practice project for my portfolio</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
